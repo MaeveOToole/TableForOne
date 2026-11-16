@@ -1,0 +1,62 @@
+{
+  "requestedRegion": "Massachusetts",
+  "coverageRegion": "Northeast US",
+  "retrievedOn": "2026-11-03",
+  "observedPeriod": "2026-09",
+  "source": "U.S. Bureau of Labor Statistics",
+  "sourceUrl": "https://www.bls.gov/regions/mid-atlantic/data/averageretailfoodandenergyprices_usandnortheast_table.htm",
+  "methodologyUrl": "https://www.bls.gov/cpi/factsheets/average-prices.htm",
+  "note": "Regional standard-unit averages, not Massachusetts retailer quotes or verified package prices. Missing regional values are not filled from national data.",
+  "items": [
+    {
+      "id": "ground-beef",
+      "aliases": ["ground beef", "100% ground beef"],
+      "dollarsPerPound": 7.016
+    },
+    {
+      "id": "boneless-chicken-breast",
+      "aliases": [
+        "boneless chicken breast",
+        "boneless chicken breasts",
+        "boneless skinless chicken breast",
+        "boneless skinless chicken breasts"
+      ],
+      "dollarsPerPound": 3.957
+    },
+    {
+      "id": "bacon",
+      "aliases": ["sliced bacon", "bacon"],
+      "dollarsPerPound": 7.926
+    },
+    {
+      "id": "bananas",
+      "aliases": ["bananas", "banana"],
+      "dollarsPerPound": 0.689
+    },
+    {
+      "id": "lemons",
+      "aliases": ["lemons", "lemon"],
+      "dollarsPerPound": 1.935
+    },
+    {
+      "id": "white-potatoes",
+      "aliases": ["white potatoes", "white potato"],
+      "dollarsPerPound": 1.011
+    },
+    {
+      "id": "romaine-lettuce",
+      "aliases": ["romaine lettuce"],
+      "dollarsPerPound": 2.805
+    },
+    {
+      "id": "fresh-tomatoes",
+      "aliases": ["fresh tomatoes", "fresh tomato", "field-grown tomatoes"],
+      "dollarsPerPound": 2.603
+    },
+    {
+      "id": "potato-chips",
+      "aliases": ["potato chips"],
+      "dollarsPerPound": 7.604
+    }
+  ]
+}

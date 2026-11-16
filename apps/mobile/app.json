@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Table for One",
+    "slug": "meal-planner",
+    "scheme": "mealplanner",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mealplanner.app",
+      "deploymentTarget": "16.4"
+    },
+    "plugins": ["expo-secure-store", "expo-status-bar"],
+    "platforms": ["ios", "web"],
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

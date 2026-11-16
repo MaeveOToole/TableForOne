@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: table-for-one-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev --workspace=@meal/api --workspace=@meal/contracts --include-workspace-root && npm run typecheck -w @meal/contracts && npm run typecheck -w @meal/api
+    startCommand: npm run start -w @meal/api
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_ENV
+        value: staging
+      - key: HOST
+        value: 0.0.0.0
+      - key: LOG_LEVEL
+        value: info
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: WEB_ORIGIN
+        sync: false

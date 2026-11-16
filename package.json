@@ -1,0 +1,35 @@
+{
+  "name": "meal-planner",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test:web": "playwright test",
+    "test:web:core": "playwright test --config playwright.core.config.ts",
+    "dev:api": "npm run dev -w @meal/api",
+    "dev:mobile": "npm run start -w @meal/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run typecheck && npm test && npm run spec:check -w @meal/api && npm run format:check",
+    "preview": "npm run web -w @meal/mobile"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.13.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.72.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

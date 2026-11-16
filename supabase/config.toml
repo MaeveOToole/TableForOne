@@ -1,0 +1,19 @@
+project_id = "meal-planner"
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+[db]
+port = 54322
+major_version = 17
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+[auth]
+enabled = true
+site_url = "mealplanner://"
+additional_redirect_urls = ["mealplanner://**", "mealplanner-development://**", "mealplanner-staging://**"]
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true

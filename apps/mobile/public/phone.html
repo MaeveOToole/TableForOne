@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Table for One - Device Preview</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e5e9e9;
+        color: #25292b;
+        font-family: system-ui, sans-serif;
+      }
+      header {
+        padding: 20px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 4px;
+      }
+      p {
+        font-size: 14px;
+        margin: 0;
+        color: #25292b;
+      }
+      select,
+      a,
+      button {
+        font: inherit;
+        padding: 10px 14px;
+        border: 1px solid #647c8a;
+        border-radius: 10px;
+        background: #fff;
+        color: #25292b;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+      }
+      main {
+        padding: 10px 18px 36px;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+      }
+      .device {
+        border: 10px solid #26352c;
+        border-radius: 42px;
+        background: #26352c;
+        box-shadow: 0 20px 50px #25292b30;
+        width: 410px;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+      .status {
+        height: 25px;
+        background: #f8f6ef;
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 23px;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      iframe {
+        display: block;
+        width: 390px;
+        height: 780px;
+        border: 0;
+        background: #f8f6ef;
+      }
+      .home {
+        height: 20px;
+        background: #f8f6ef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .home:after {
+        content: '';
+        width: 110px;
+        height: 4px;
+        border-radius: 4px;
+        background: #26352c;
+      }
+      .controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .hint {
+        text-align: center;
+        margin: 0 16px 20px;
+      }
+      @media (max-width: 450px) {
+        header {
+          padding: 16px;
+        }
+        main {
+          justify-content: flex-start;
+          padding: 8px;
+        }
+        .device {
+          border-width: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Table for One</h1>
+        <p>Interactive device preview</p>
+      </div>
+      <div class="controls">
+        <label for="device">Screen</label
+        ><select id="device">
+          <option value="390,780">iPhone - 390 px</option>
+          <option value="430,850">iPhone large - 430 px</option>
+          <option value="820,1000">iPad - 820 px</option></select
+        ><a href="/" target="_blank" rel="noopener">Full browser</a>
+      </div>
+    </header>
+    <main>
+      <div class="device" id="frame">
+        <div class="status">
+          <span>9:41</span><span>Wi-Fi &nbsp; 100%</span>
+        </div>
+        <iframe id="app" src="/" title="Meal planning app"></iframe>
+        <div class="home"></div>
+      </div>
+    </main>
+    <p class="hint">
+      Test navigation, search, recipe details, saves, and budget settings.
+      Native iOS features need a device build.
+    </p>
+    <script>
+      document.getElementById('device').addEventListener('change', (event) => {
+        const [width, height] = event.target.value.split(',').map(Number);
+        const app = document.getElementById('app');
+        app.style.width = width + 'px';
+        app.style.height = height + 'px';
+        document.getElementById('frame').style.width =
+          width + (innerWidth <= 450 ? 10 : 20) + 'px';
+      });
+    </script>
+  </body>
+</html>

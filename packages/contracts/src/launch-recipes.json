@@ -1,0 +1,1151 @@
+[
+  {
+    "id": "50000000-0000-4000-8000-000000000001",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Lemon chickpea and spinach skillet",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Mediterranean",
+    "minutes": 20,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1 can chickpeas (15-ounce can), drained and rinsed",
+        "name": "chickpeas",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "3 1/2 cups loosely packed spinach, washed",
+        "name": "spinach",
+        "quantity": 3.5,
+        "unit": "cup",
+        "notes": "washed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "0.5 whole lemon, juice to taste",
+        "name": "lemon",
+        "quantity": 0.5,
+        "unit": "whole",
+        "notes": "juice to taste"
+      }
+    ],
+    "instructions": [
+      "Drain and rinse the chickpeas. Wash the spinach.",
+      "Warm the oil in a skillet over medium heat. Add chickpeas and 3 tablespoons water; cook for 5 minutes, stirring.",
+      "Add spinach and cook for 2 to 3 minutes until wilted and everything is hot. Add lemon juice to taste and divide into two portions."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000002",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Tomato white bean pasta",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Italian",
+    "minutes": 25,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1 1/2 cups dry short pasta; cook according to package",
+        "name": "pasta",
+        "quantity": 1.5,
+        "unit": "cup",
+        "notes": "dry; cook according to package"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can white beans (15-ounce can), drained and rinsed",
+        "name": "white beans",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can diced tomatoes (14.5-ounce can)",
+        "name": "diced tomatoes",
+        "quantity": 1,
+        "unit": "14.5-ounce can",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tsp dried oregano",
+        "name": "dried oregano",
+        "quantity": 1,
+        "unit": "tsp",
+        "notes": null
+      }
+    ],
+    "instructions": [
+      "Cook the pasta according to its package directions.",
+      "Meanwhile, heat oil in another pan. Add tomatoes, beans and oregano; simmer for 10 minutes, stirring.",
+      "Drain pasta and combine with the hot sauce. Divide into two portions."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000003",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Black bean rice and avocado bowls",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Mexican",
+    "minutes": 30,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1/2 cup dry rice",
+        "name": "rice",
+        "quantity": 0.5,
+        "unit": "cup",
+        "notes": "dry"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can black beans (15-ounce can), drained and rinsed",
+        "name": "black beans",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 whole avocado, slice just before serving",
+        "name": "avocado",
+        "quantity": 1,
+        "unit": "whole",
+        "notes": "slice just before serving"
+      },
+      {
+        "confidence": "generated",
+        "raw": "4 tbsp salsa, check package ingredients",
+        "name": "salsa",
+        "quantity": 4,
+        "unit": "tbsp",
+        "notes": "check package ingredients"
+      }
+    ],
+    "instructions": [
+      "Cook rice according to the package directions.",
+      "Warm the beans with 3 tablespoons water in a saucepan over medium heat for 5 minutes, stirring until hot.",
+      "Divide the rice and beans into two bowls. Top with avocado and salsa."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000004",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Roasted sweet potato and lentil plates",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Mediterranean",
+    "minutes": 40,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Oven", "Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "3 cups sweet potato, cut into 3/4-inch cubes",
+        "name": "sweet potato",
+        "quantity": 3,
+        "unit": "cup",
+        "notes": "cut into 2 cm cubes"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can cooked lentils (15-ounce can), drained and rinsed",
+        "name": "cooked lentils",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "3 1/2 cups loosely packed spinach, washed",
+        "name": "spinach",
+        "quantity": 3.5,
+        "unit": "cup",
+        "notes": "washed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "0.5 whole lemon, juice to taste",
+        "name": "lemon",
+        "quantity": 0.5,
+        "unit": "whole",
+        "notes": "juice to taste"
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 220 C / 425 F. Toss sweet potato cubes with oil on a baking tray.",
+      "Roast for 25 to 30 minutes until tender, turning once.",
+      "Heat lentils with 3 tablespoons water in a saucepan for 5 minutes. Add spinach and stir until wilted. Divide between two plates with the sweet potato and finish with lemon."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000005",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Broccoli pea and white bean rice",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Italian",
+    "minutes": 30,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1/2 cup dry rice",
+        "name": "rice",
+        "quantity": 0.5,
+        "unit": "cup",
+        "notes": "dry"
+      },
+      {
+        "confidence": "generated",
+        "raw": "2 cups broccoli, small florets",
+        "name": "broccoli",
+        "quantity": 2,
+        "unit": "cup",
+        "notes": "small florets"
+      },
+      {
+        "confidence": "generated",
+        "raw": "2/3 cup frozen peas",
+        "name": "frozen peas",
+        "quantity": 0.6666666666666666,
+        "unit": "cup",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can white beans (15-ounce can), drained and rinsed",
+        "name": "white beans",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      }
+    ],
+    "instructions": [
+      "Cook rice according to its package directions.",
+      "Steam broccoli for 6 to 8 minutes until tender. Cook peas according to their package.",
+      "Heat beans with a splash of water until hot. Combine everything with olive oil and divide into two portions."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000006",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Pepper black bean tacos",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Mexican",
+    "minutes": 25,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "2 whole bell pepper, sliced",
+        "name": "bell pepper",
+        "quantity": 2,
+        "unit": "whole",
+        "notes": "sliced"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can black beans (15-ounce can), drained and rinsed",
+        "name": "black beans",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "4 whole corn tortillas, check package ingredients",
+        "name": "corn tortillas",
+        "quantity": 4,
+        "unit": "whole",
+        "notes": "check package ingredients"
+      },
+      {
+        "confidence": "generated",
+        "raw": "2 tbsp salsa",
+        "name": "salsa",
+        "quantity": 2,
+        "unit": "tbsp",
+        "notes": null
+      }
+    ],
+    "instructions": [
+      "Cook sliced peppers in oil over medium heat for 8 to 10 minutes until tender.",
+      "Add beans with 3 tablespoons water. Cook for 5 minutes, stirring until hot.",
+      "Warm tortillas according to the package. Fill with the mixture and top with salsa; serve two tacos per portion."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000007",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Tomato red lentil soup",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Mediterranean",
+    "minutes": 35,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "2/3 cup dry red lentils, rinsed",
+        "name": "red lentils",
+        "quantity": 0.6666666666666666,
+        "unit": "cup",
+        "notes": "dry; rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can diced tomatoes (14.5-ounce can)",
+        "name": "diced tomatoes",
+        "quantity": 1,
+        "unit": "14.5-ounce can",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 whole carrot, finely diced",
+        "name": "carrot",
+        "quantity": 1,
+        "unit": "whole",
+        "notes": "finely diced"
+      },
+      {
+        "confidence": "generated",
+        "raw": "600 ml water",
+        "name": "water",
+        "quantity": 600,
+        "unit": "ml",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "0.5 tsp ground cumin",
+        "name": "ground cumin",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "notes": null
+      }
+    ],
+    "instructions": [
+      "Heat oil in a saucepan. Add diced carrot and cook over medium heat for 5 minutes, stirring.",
+      "Add lentils, tomatoes, water and cumin. Bring to a boil, then simmer gently for 20 to 25 minutes until lentils and carrot are tender.",
+      "Stir frequently toward the end and add water if needed. Divide into two portions; let soup cool slightly before eating."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000008",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Courgette chickpea tomato stew",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Italian",
+    "minutes": 30,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "dinner",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "2 cups zucchini, cut into small cubes",
+        "name": "zucchini",
+        "quantity": 2,
+        "unit": "cup",
+        "notes": "cut into small cubes"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can chickpeas (15-ounce can), drained and rinsed",
+        "name": "chickpeas",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 can diced tomatoes (14.5-ounce can)",
+        "name": "diced tomatoes",
+        "quantity": 1,
+        "unit": "14.5-ounce can",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tsp dried oregano",
+        "name": "dried oregano",
+        "quantity": 1,
+        "unit": "tsp",
+        "notes": null
+      }
+    ],
+    "instructions": [
+      "Heat oil in a saucepan over medium heat. Add zucchini and cook for 5 minutes, stirring.",
+      "Add tomatoes, chickpeas and oregano. Simmer for 15 minutes until zucchini is tender and stew is hot.",
+      "Add a splash of water if needed. Divide into two portions."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000009",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Chickpea cucumber lunch bowls",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Mediterranean",
+    "minutes": 15,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "lunch",
+    "incomplete": false,
+    "equipment": [],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1 can chickpeas (15-ounce can), drained and rinsed",
+        "name": "chickpeas",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 1/2 cups cucumber, washed and diced",
+        "name": "cucumber",
+        "quantity": 1.5,
+        "unit": "cup",
+        "notes": "washed and diced"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 cup tomato, washed and diced",
+        "name": "tomato",
+        "quantity": 1,
+        "unit": "cup",
+        "notes": "washed and diced"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "0.5 whole lemon, juice to taste",
+        "name": "lemon",
+        "quantity": 0.5,
+        "unit": "whole",
+        "notes": "juice to taste"
+      }
+    ],
+    "instructions": [
+      "Drain and rinse the chickpeas. Wash and dice cucumber and tomato.",
+      "Combine in a bowl with oil and lemon juice to taste.",
+      "Divide into two portions. Keep any uneaten portion refrigerated promptly."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000010",
+    "revision": 1,
+    "owner_id": null,
+    "title": "White bean tomato lunch salad",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "Italian",
+    "minutes": 15,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "lunch",
+    "incomplete": false,
+    "equipment": [],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free",
+      "Gluten-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1 can white beans (15-ounce can), drained and rinsed",
+        "name": "white beans",
+        "quantity": 1,
+        "unit": "15-ounce can",
+        "notes": "drained and rinsed"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 cup tomato, washed and diced",
+        "name": "tomato",
+        "quantity": 1,
+        "unit": "cup",
+        "notes": "washed and diced"
+      },
+      {
+        "confidence": "generated",
+        "raw": "2 cups loosely packed spinach, washed and chopped",
+        "name": "spinach",
+        "quantity": 2,
+        "unit": "cup",
+        "notes": "washed and chopped"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 tbsp olive oil",
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "0.5 whole lemon, juice to taste",
+        "name": "lemon",
+        "quantity": 0.5,
+        "unit": "whole",
+        "notes": "juice to taste"
+      }
+    ],
+    "instructions": [
+      "Drain and rinse beans. Wash and prepare tomato and spinach.",
+      "Combine ingredients with olive oil and lemon juice to taste.",
+      "Divide into two portions and refrigerate any uneaten portion promptly."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000011",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Banana cinnamon oatmeal",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "American",
+    "minutes": 10,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "breakfast",
+    "incomplete": false,
+    "equipment": ["Stovetop"],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1 cup rolled oats",
+        "name": "rolled oats",
+        "quantity": 1,
+        "unit": "cup",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "400 ml water",
+        "name": "water",
+        "quantity": 400,
+        "unit": "ml",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 whole banana, sliced",
+        "name": "banana",
+        "quantity": 1,
+        "unit": "whole",
+        "notes": "sliced"
+      },
+      {
+        "confidence": "generated",
+        "raw": "0.5 tsp ground cinnamon",
+        "name": "ground cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "notes": null
+      }
+    ],
+    "instructions": [
+      "Combine oats and water in a saucepan. Bring to a gentle simmer.",
+      "Cook for the time on the oat package, stirring often and adding water if needed.",
+      "Divide into two bowls and top with banana and cinnamon."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  },
+  {
+    "id": "50000000-0000-4000-8000-000000000012",
+    "revision": 1,
+    "owner_id": null,
+    "title": "Berry yogurt breakfast bowls",
+    "description": "An original two-portion recipe for cooking for one. AI-generated and not kitchen-tested.",
+    "cuisine": "American",
+    "minutes": 5,
+    "servings": 2,
+    "difficulty": "simple",
+    "category": "breakfast",
+    "incomplete": false,
+    "equipment": [],
+    "equipment_known": true,
+    "dietary_tags": [
+      "Vegetarian",
+      "Egg-free",
+      "Peanut-free",
+      "Tree nut-free",
+      "Sesame-free",
+      "Shellfish-free",
+      "Fish-free"
+    ],
+    "creator": null,
+    "image_url": null,
+    "image_permission": "none",
+    "nutrition": null,
+    "estimated_additional_cost_cents": null,
+    "cost_source": null,
+    "extraction_confidence": "generated",
+    "content_permissions": {
+      "personalStorage": true,
+      "redistribution": true
+    },
+    "personal_modifications": [
+      {
+        "method": "generated",
+        "kind": "kitchen_measurements_v1",
+        "note": "Adapted to US kitchen measures and item/package counts. Amounts are approximate; produce and meat sizes vary. Not kitchen-tested."
+      }
+    ],
+    "source_recipe_id": null,
+    "ingredients": [
+      {
+        "confidence": "generated",
+        "raw": "1 1/3 cups plain yogurt",
+        "name": "plain yogurt",
+        "quantity": 1.3333333333333333,
+        "unit": "cup",
+        "notes": null
+      },
+      {
+        "confidence": "generated",
+        "raw": "1 cup fresh berries, washed",
+        "name": "berries",
+        "quantity": 1,
+        "unit": "cup",
+        "notes": "washed; use fresh berries"
+      },
+      {
+        "confidence": "generated",
+        "raw": "1/2 cup rolled oats, ready-to-eat or prepare according to package",
+        "name": "rolled oats",
+        "quantity": 0.5,
+        "unit": "cup",
+        "notes": "ready-to-eat or prepare according to package"
+      }
+    ],
+    "instructions": [
+      "Wash berries. Use oats suitable for eating without cooking, or prepare them according to the package and cool.",
+      "Divide yogurt between two bowls.",
+      "Top with berries and oats. Refrigerate any uneaten portion promptly."
+    ],
+    "provenance": {
+      "source": "Table for One original starter catalog",
+      "url": null,
+      "permission": "Original AI-generated recipe; personal storage and sharing allowed. Not kitchen-tested. Dietary tags reflect listed ingredients; check product labels.",
+      "method": "generated"
+    }
+  }
+]

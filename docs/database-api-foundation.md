@@ -1,0 +1,47 @@
+# Database and API foundation
+
+Implemented October 27, 2026. This supplies domain storage, authorization boundaries, transaction primitives and API contracts. Meal generation, grocery arithmetic, import workers, chat execution, sharing-link creation, Undo execution and their mobile screens remain in their own milestones.
+
+## Schema and ownership
+
+Apply the canonical migrations in filename order. The two October 27 migrations are additive to the existing October 26 schema. They add profiles; private immutable recipe versions and ingredient rows; import jobs; plans and slots; pantry; regular purchases; grocery lists/items; price estimates; cooking events; ratings; recipe shares; chat threads/messages; and mutation/undo receipts. Users remain in Supabase Auth, with preferences linked by user ID.
+
+Each private domain row has a UUID ID, user ID, created/updated timestamps and a positive revision. Updates validate that identity/ownership/creation time do not change and require exactly one revision increment. Existing recipes and saves gain revision/update metadata; preferences gain a stable UUID. Append-only versions, ingredient snapshots, cooking events and chat messages are not granted update/delete access. Domain records cascade with account deletion; implementing deletion UI and broader retention remains separate work.
+
+Composite foreign keys include user ID, preventing a row from referring to another user's private parent even through direct database access. Recipe-version creation requires an accessible source recipe and cannot increase its redistribution permission. Versions keep the original snapshot, attribution, extraction method, confidence, permissions and modifications separately. Ingredients retain raw text alongside nullable normalized name, quantity and unit. Unknown values remain null/unknown. Existing catalog JSON remains compatible with mobile discovery.
+
+Row-level security permits private reads only to owners. Only selected editable tables have owner-scoped direct writes; append-only tables permit owner inserts. Derived plan/list rows, import-job state and mutation receipts have no client write grants. Every implemented API write goes through the fixed-action transaction function; it never accepts a table name or caller-provided owner ID. The API passes the user's token; functions derive the actor from `auth.uid()` and validate ownership themselves. Public catalog access remains separate.
+
+Sharing is limited to an explicit signed-in recipient, a live unrevoked share, and a version whose source permits redistribution. The read function returns only allowlisted recipe fields and save permission. It does not expose another account's version table, pantry, plans, groceries, history or chat. Token hashes are reserved for later sharing-link work; there is no anonymous token redemption endpoint. Generic resource responses strip token hashes. Sharing UI/creation workflows remain unimplemented.
+
+## API contracts
+
+The generated [OpenAPI 3.1 specification](openapi.json) describes implemented endpoints. Shared Zod schemas define bodies, domain responses, pagination, errors, confidence and job states. `npm run spec:write -w @meal/api` regenerates it; `npm run check` checks it against source. Job states are `queued`, `processing`, `needs_review`, `ready`, `link_only` and `failed`; storage/polling contracts exist, but no import worker or enqueue endpoint exists yet.
+
+All private routes validate a Supabase bearer token. `GET /v1/resources/{resource}` accepts only the explicit domain allowlist, orders by stable ID, and supports `offset`/`limit` (maximum 50). `nextOffset` is null at the end. Offset pagination can shift during concurrent inserts/deletes; it is not an offline-sync cursor. Legacy `/v1/saved` remains unpaginated for the existing first slice. The raw resource endpoint is an administrative client building block: grocery shoppers must use the plan document, which withholds stale items, and must respect grocery state.
+
+Every implemented write requires `Idempotency-Key` (8–128 characters from letters, numbers, `.`, `_`, `:`, `-`). Retain it for retries of the identical logical operation. A per-user advisory lock and unique receipt serialize repeated keys. An identical replay returns its stored result before revision checking; reusing a key with changed input returns 409/`IDEMPOTENCY_CONFLICT`. Results are historical acknowledgments; reload current state after a replay if subsequent operations may have changed it. Keys are scoped across actions for the same user. The mobile transport creates a key per invocation; durable offline retry/outbox behavior is not implemented yet.
+
+Preferences and plan/item updates use expected revisions. Save/remove remain inherently repeat-safe set operations, with no editable save payload; they also store operation receipts. Stale revisions return 409/`REVISION_CONFLICT`; uniqueness conflicts return 409/`RECORD_CONFLICT`. Reload and review rather than overwriting. Errors contain a request ID and safe validation field paths/codes, excluding submitted values and SQL details. Invalid server responses produce 500 rather than pretending they were client validation errors.
+
+## Plan/grocery transaction and repair
+
+`PUT /v1/plans/{id}` accepts a full slot set, expected plan/list revisions and a precomputed grocery projection. Revision zero creates a plan. The projection is a foundation input, not an implemented ingredient calculator: only reviewed/deterministically calculated requirements should be submitted by future planning tools. UUID slots retain identity and creation timestamps across edits. Locked slots cannot be changed or dropped by full replacement. A leftover must refer to a cooking slot in the same plan; these integrity checks do not yet implement the portion-allocation planner.
+
+The transaction saves valid slots and attempts the grocery projection in a nested transaction block. On success, plan/list state is ready. On grocery revision or constraint failure, the grocery subtransaction rolls back, the new plan remains saved, and the list/plan become `needs_review`. The pending requirements are stored with the plan. The response includes a recovery message/code and no stale grocery items. This implements the user's selected behavior: save the new plan and repair its groceries afterward. Invalid slots, stale plan revisions or unauthorized references fail the whole mutation without changing the plan.
+
+`GET /v1/plans/{id}` returns the current state. For repair, reload, review any intervening grocery edits, then call `POST /v1/plans/{id}/repair-groceries` with current plan/list revisions and a new operation key. It retries the stored projection. A repeated failure remains `needs_review`; a successful repair clears pending requirements and restores ready state. To change invalid pending requirements, submit a corrected full plan rather than blindly repeating repair. No automatic background retry or mobile recovery screen is claimed.
+
+Projection rows use stable origin keys. Regeneration preserves manual/regular items, explicit quantity overrides and deletion tombstones. Valid checked states survive; changing a derived quantity/unit clears its checked state. `PUT /v1/grocery-items/{id}` supports revisioned shopping edits and manual additions (revision zero); edits increment the parent list revision, so stale projections cannot overwrite shopping changes silently. Deleted rows are retained as tombstones. Multiple derived origins are stored on each item, with unknown quantities remaining null.
+
+Mutation receipts retain request/result and before/after snapshots, including hidden pending projections and stored grocery items for later Undo implementation. Receipts cannot be edited by clients. The undo linkage exists in the schema; executing Undo and conflict-aware restoration remain Milestone 3 work.
+
+## Migration and verification
+
+Do not rerun the combined `setup-development.sql` on the initialized hosted database. Review and apply only missing canonical migrations after reconciling migration history. Apply both October 27 migrations before restarting/deploying the updated API or using its mutation routes. `/ready` verifies the foundation migration marker and catalog access, so an older schema is reported unavailable. No hosted schema or data was changed by this work.
+
+`npm run check` runs SQL integration tests in PGlite (PostgreSQL in WebAssembly) in addition to API/contract tests. The test engine uses small stubs for Supabase's auth schema/roles and executes all application migrations unchanged. Tests cover RLS, cross-owner references, CAS conflicts, stable metadata, repeat receipts/key conflicts, plan persistence on grocery failure, repair, manual edits/overrides, locked slots, rights escalation prevention, scoped/revoked sharing and account-data cascades. It does not emulate Supabase Auth, PostgREST deployment/schema-cache behavior or multi-connection production concurrency. CI retains the separate real Supabase/pgTAP policy job. Live hosted migration verification and device acceptance remain pending.
+
+## Milestone 1 activation update
+
+October 27, 2026: the user applied the reviewed development upgrade. Read-only checks confirm schema marker `202610270004`, twelve complete starter recipes and anonymous private-table denial. The new library/catalog migrations extend this foundation; see [Milestone 1 acceptance](milestone-one-acceptance.md). Authenticated flows and signed-device acceptance remain pending.

@@ -1,0 +1,21 @@
+{
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "environment": "development",
+      "env": { "APP_ENV": "development", "EXPO_PUBLIC_RELEASE_SCOPE": "core" }
+    },
+    "staging": {
+      "distribution": "internal",
+      "environment": "preview",
+      "env": { "APP_ENV": "staging", "EXPO_PUBLIC_RELEASE_SCOPE": "core" }
+    },
+    "preview": { "extends": "staging" },
+    "production": {
+      "autoIncrement": true,
+      "environment": "production",
+      "env": { "APP_ENV": "production", "EXPO_PUBLIC_RELEASE_SCOPE": "core" }
+    }
+  }
+}
