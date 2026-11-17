@@ -1,5 +1,14 @@
 # Free Render backend setup
 
+## Active deployment — November 16, 2026
+
+- GitHub: <https://github.com/MaeveOToole/TableForOne>, branch `main`.
+- Render API: <https://table-for-one-api.onrender.com> (Free, Node, `APP_ENV=staging`).
+- Render service: <https://dashboard.render.com/web/srv-dbtkbq88v5cc73998b90>.
+- Expo: <https://expo.dev/accounts/maeveotoole/projects/meal-planner>.
+
+The live API passed the read-only connection check: health, database readiness, catalog recipe details, and anonymous saved-recipe rejection. This does not establish authenticated writes or physical-device acceptance. The Expo production build environment now has the Render API URL and the matching Supabase public settings; no privileged key was configured. Apple signing and TestFlight submission are still pending. The TestFlight candidate uses the existing hosted Supabase project for testing; this is not a separate production database rollout.
+
 This deploys the Fastify API only. Keep the existing Supabase database and Auth; no Render database is needed. The Blueprint uses `APP_ENV=staging` for a hosted preview, Node 24 from `.node-version`, and the Free service plan. It does not run migrations or load fixtures.
 
 ## Deploy
