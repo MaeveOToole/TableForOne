@@ -80,6 +80,12 @@ credentials exist, a teammate can decline Apple account login during a build and
 reuse the stored credentials. A Mac is not required for EAS cloud builds or
 uploads from Windows. Submission uses the API key assigned to the app in EAS.
 
+`npm run submit:ios` uses the same generated production identity as credential
+management and copies the submission profile from `apps/mobile/eas.json`. This
+keeps uploads on `com.maevemealplanner.app` rather than the default development
+identity. Backend settings are required for a production build, but not to upload
+an existing build.
+
 Uploading a build makes it available in App Store Connect/TestFlight after Apple
 processes it. Public release still requires listing details, privacy information,
 device testing and App Review. See [the first-release checklist](first-release.md).

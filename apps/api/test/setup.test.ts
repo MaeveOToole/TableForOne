@@ -222,6 +222,7 @@ test('signing workspace uses the real production identity without requiring back
     assert.deepEqual(Object.keys(eas.build), ['production']);
     assert.equal(eas.build.production.distribution, 'store');
     assert.equal(eas.build.production.credentialsSource, 'remote');
+    assert.deepEqual(eas.submit, require('../../mobile/eas.json').submit);
   } finally {
     process.env = original;
   }

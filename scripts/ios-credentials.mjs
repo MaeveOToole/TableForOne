@@ -6,8 +6,8 @@ import process from 'node:process';
 import console from 'node:console';
 import appIdentity from '../apps/mobile/config/app-identity.js';
 
-// Credential management needs the production identity and entitlements, but no
-// backend settings. Generate a separate, ignored workspace for this command only.
+// Credential management and submission need the production identity and
+// entitlements, but no backend settings. Use a separate, ignored workspace.
 // Actual builds still use apps/mobile/app.config.js and its production guards.
 const root = fileURLToPath(new URL('../', import.meta.url));
 const base = JSON.parse(
@@ -22,6 +22,9 @@ const workspace = path.join(root, 'tmp/ios-signing');
 await mkdir(workspace, { recursive: true });
 const mobile = JSON.parse(
   await readFile(path.join(root, 'apps/mobile/package.json'), 'utf8'),
+);
+const mobileEas = JSON.parse(
+  await readFile(path.join(root, 'apps/mobile/eas.json'), 'utf8'),
 );
 await writeFile(
   path.join(workspace, 'package.json'),
@@ -48,6 +51,7 @@ await writeFile(
       build: {
         production: { distribution: 'store', credentialsSource: 'remote' },
       },
+      submit: mobileEas.submit,
     },
     null,
     2,
@@ -60,7 +64,9 @@ if (process.argv.includes('--prepare-only')) {
 } else {
   const child = spawn(
     process.platform === 'win32' ? 'eas.cmd' : 'eas',
-    ['credentials', '--platform', 'ios'],
+    process.argv.includes('--submit')
+      ? ['submit', '--platform', 'ios', '--profile', 'production']
+      : ['credentials', '--platform', 'ios'],
     { cwd: workspace, stdio: 'inherit', shell: process.platform === 'win32' },
   );
   child.on('error', (error) => {

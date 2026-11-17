@@ -13,7 +13,7 @@
     "dev:mobile": "npm run start -w @meal/mobile",
     "build:ios": "cd apps/mobile && eas build --platform ios --profile production",
     "credentials:ios": "node scripts/ios-credentials.mjs",
-    "submit:ios": "cd apps/mobile && eas submit --platform ios --profile production",
+    "submit:ios": "node scripts/ios-credentials.mjs --submit",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "format": "prettier --write .",
