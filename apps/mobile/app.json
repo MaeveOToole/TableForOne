@@ -9,9 +9,12 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.mealplanner.app",
-      "deploymentTarget": "16.4"
+      "deploymentTarget": "16.4",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
-    "plugins": ["expo-secure-store", "expo-status-bar"],
+    "plugins": ["expo-secure-store", "expo-status-bar", "expo-sqlite"],
     "platforms": ["ios", "web"],
     "web": {
       "bundler": "metro"

@@ -1,4 +1,8 @@
 {
+  "cli": {
+    "version": ">= 21.0.0",
+    "appVersionSource": "remote"
+  },
   "build": {
     "development": {
       "developmentClient": true,
@@ -13,6 +17,7 @@
     },
     "preview": { "extends": "staging" },
     "production": {
+      "credentialsSource": "remote",
       "distribution": "store",
       "autoIncrement": true,
       "environment": "production",

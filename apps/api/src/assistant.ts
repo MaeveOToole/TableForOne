@@ -34,15 +34,13 @@ export function registerAssistantRoutes(
       await authenticate(request.headers.authorization);
       const input = inputSchema.parse(request.body);
       if (!config.apiKey)
-        return reply
-          .code(503)
-          .send({
-            error: {
-              code: 'AI_NOT_CONFIGURED',
-              message:
-                'AI is not configured on the server. Add OPENAI_API_KEY and restart the API.',
-            },
-          });
+        return reply.code(503).send({
+          error: {
+            code: 'AI_NOT_CONFIGURED',
+            message:
+              'AI is not configured on the server. Add OPENAI_API_KEY and restart the API.',
+          },
+        });
       try {
         const response = await requestOpenAI(
           'https://api.openai.com/v1/responses',
@@ -92,15 +90,13 @@ export function registerAssistantRoutes(
           throw new Error('Incomplete response');
         return { message };
       } catch {
-        return reply
-          .code(502)
-          .send({
-            error: {
-              code: 'AI_UNAVAILABLE',
-              message:
-                'AI could not respond. Please retry. If this continues, check the server API key, model access and OpenAI billing.',
-            },
-          });
+        return reply.code(502).send({
+          error: {
+            code: 'AI_UNAVAILABLE',
+            message:
+              'AI could not respond. Please retry. If this continues, check the server API key, model access and OpenAI billing.',
+          },
+        });
       }
     },
   );
