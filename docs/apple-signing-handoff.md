@@ -6,20 +6,20 @@ Brandon's Apple Developer Program membership will own the app. Maeve will manage
 development and submission using a copy of the Expo project and her GitHub repository.
 Maeve must receive access to the copied Expo project before she can reuse its credentials.
 
-| Item                    | Destination                                  | Status                                                                                   |
-| ----------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Source                  | `https://github.com/MaeveOToole/TableForOne` | Read-only upstream; handoff will be submitted through `brarduous/TableForOne`            |
-| Expo project            | `@donarduous-1/meal-planner`                 | Project ID `137583ff-377c-4c8a-8094-457257421a38`; accessible copy authorized by Brandon |
-| Apple team              | Brandon's paid membership                    | Team ID and membership type not verified                                                 |
-| Production bundle ID    | `com.maevemealplanner.app`                   | Configured in source; registration on the chosen Apple team not verified                 |
-| Store build credentials | Copied Expo project, managed by EAS          | Not verified or created during this handoff                                              |
-| Submission credentials  | App Store Connect API key assigned in EAS    | Not configured during this handoff                                                       |
-| App Store Connect app   | App record on Brandon's Apple team           | Apple ID (`ascAppId`) not yet recorded                                                   |
+| Item                    | Destination                                  | Status                                                                                        |
+| ----------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Source                  | `https://github.com/MaeveOToole/TableForOne` | Read-only upstream; handoff will be submitted through `brarduous/TableForOne`                 |
+| Expo project            | `@donarduous-1/meal-planner`                 | Project ID `137583ff-377c-4c8a-8094-457257421a38`; accessible copy authorized by Brandon      |
+| Apple team              | Brandon's paid membership                    | Verified team `QKQ2WNHKWS`, Brandon Jones (Individual)                                        |
+| Production bundle ID    | `com.maevemealplanner.app`                   | Verified in EAS with active App Store provisioning on team `QKQ2WNHKWS`                       |
+| Store build credentials | Copied Expo project, managed by EAS          | Verified November 17, 2026: certificate and active App Store profile expire November 17, 2027 |
+| Submission credentials  | App Store Connect API key assigned in EAS    | Setup/verification pending; no key was created or assigned by this handoff                    |
+| App Store Connect app   | App record on Brandon's Apple team           | Apple ID (`ascAppId`) not yet recorded                                                        |
 
 Brandon authorized using the EAS copy under `donarduous-1` because his account cannot
 access Maeve's original project (`ab8bd930-7448-49b7-b350-fcc3032aafe0`). The original
 project has not been modified. The copy now uses the requested production bundle
-ID `com.maevemealplanner.app`. Registration on Apple remains to be completed. Maeve will need access to the copy through an Expo
+ID `com.maevemealplanner.app`, with an active App Store provisioning profile in EAS. Maeve will need access to the copy through an Expo
 organization, or a verified project transfer, before she can build independently.
 
 ## Complete the signing setup
@@ -28,8 +28,8 @@ organization, or a verified project transfer, before she can build independently
    eventual handoff, use an Expo organization with individual logins or transfer
    the project to Maeve and verify credential access afterward. A personal Expo
    account does not provide organization-style member access. Do not share passwords.
-2. Confirm Brandon's paid Apple membership, team ID, membership type and that
-   `com.maevemealplanner.app` is available on that team. An Individual membership's
+2. The signing setup is verified on Brandon Jones's Individual team
+   `QKQ2WNHKWS` for `com.maevemealplanner.app`. An Individual membership's
    Account Holder must create and renew signing credentials. An Organization
    membership supports additional roles with signing access.
 3. From the repository root, run `npm run credentials:ios`. This generates an
@@ -45,7 +45,7 @@ organization, or a verified project transfer, before she can build independently
    Keep these credentials on EAS; production explicitly uses remote credentials.
 4. Create or confirm the App Store Connect app record on the same Apple team.
    Record its numeric Apple ID under `submit.production.ios.ascAppId` in
-   `apps/mobile/eas.json`, and the team ID under
+   `apps/mobile/eas.json`. The verified team ID is already recorded under
    `submit.production.ios.appleTeamId`. These identifiers can be committed.
 5. In the EAS credential manager, choose **App Store Connect: Manage your API Key**
    and **Set up your project to use an API Key for Expo Submit**. Associate the key
@@ -60,6 +60,9 @@ organization, or a verified project transfer, before she can build independently
 8. Verify a signed production build and a TestFlight upload using Maeve's Expo
    login before calling the handoff complete. Update the status table above only
    after verification.
+
+The certificate and active profile were verified from EAS metadata without another
+Apple login. A signed build and TestFlight upload have not yet been tested.
 
 ## Maeve's normal workflow
 
