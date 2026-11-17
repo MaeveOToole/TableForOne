@@ -6,15 +6,15 @@ Brandon's Apple Developer Program membership will own the app. Maeve will manage
 development and submission using a copy of the Expo project and her GitHub repository.
 Maeve must receive access to the copied Expo project before she can reuse its credentials.
 
-| Item                    | Destination                                  | Status                                                                                        |
-| ----------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Source                  | `https://github.com/MaeveOToole/TableForOne` | Read-only upstream; handoff will be submitted through `brarduous/TableForOne`                 |
-| Expo project            | `@donarduous-1/meal-planner`                 | Project ID `137583ff-377c-4c8a-8094-457257421a38`; accessible copy authorized by Brandon      |
-| Apple team              | Brandon's paid membership                    | Verified team `QKQ2WNHKWS`, Brandon Jones (Individual)                                        |
-| Production bundle ID    | `com.maevemealplanner.app`                   | Verified in EAS with active App Store provisioning on team `QKQ2WNHKWS`                       |
-| Store build credentials | Copied Expo project, managed by EAS          | Verified November 17, 2026: certificate and active App Store profile expire November 17, 2027 |
-| Submission credentials  | App Store Connect API key assigned in EAS    | Setup/verification pending; no key was created or assigned by this handoff                    |
-| App Store Connect app   | App record on Brandon's Apple team           | Apple ID (`ascAppId`) not yet recorded                                                        |
+| Item                    | Destination                                  | Status                                                                                                                   |
+| ----------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Source                  | `https://github.com/MaeveOToole/TableForOne` | [Draft handoff PR #1](https://github.com/MaeveOToole/TableForOne/pull/1) from `brarduous/TableForOne`                    |
+| Expo project            | `@donarduous-1/meal-planner`                 | Project ID `137583ff-377c-4c8a-8094-457257421a38`; accessible copy authorized by Brandon                                 |
+| Apple team              | Brandon's paid membership                    | Verified team `QKQ2WNHKWS`, Brandon Jones (Individual)                                                                   |
+| Production bundle ID    | `com.maevemealplanner.app`                   | Verified in EAS with active App Store provisioning on team `QKQ2WNHKWS`                                                  |
+| Store build credentials | Copied Expo project, managed by EAS          | Verified November 17, 2026: certificate and active App Store profile expire November 17, 2027                            |
+| Submission credentials  | App Store Connect API key assigned in EAS    | App Manager key setup attempted November 17, 2026; Apple returned an internal server error; EAS assignment not confirmed |
+| App Store Connect app   | App record on Brandon's Apple team           | Apple ID (`ascAppId`) not yet recorded                                                                                   |
 
 Brandon authorized using the EAS copy under `donarduous-1` because his account cannot
 access Maeve's original project (`ab8bd930-7448-49b7-b350-fcc3032aafe0`). The original
@@ -63,6 +63,16 @@ organization, or a verified project transfer, before she can build independently
 
 The certificate and active profile were verified from EAS metadata without another
 Apple login. A signed build and TestFlight upload have not yet been tested.
+
+### Submission-key troubleshooting
+
+Apple login succeeded using the saved session, but Apple returned an internal
+server error when EAS attempted to create the approved App Manager API key. Do not
+assume the key is stored in EAS. Check App Store Connect under **Users and Access >
+Integrations > App Store Connect API**. If **Request Access** appears, Brandon must
+review and submit that request himself, including any Apple terms. If API access
+is already active, verify whether the failed attempt created a key before
+retrying. See [Apple's API access instructions](https://developer.apple.com/help/app-store-connect/get-started/app-store-connect-api/).
 
 ## Maeve's normal workflow
 
