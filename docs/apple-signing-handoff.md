@@ -14,7 +14,7 @@ Maeve must receive access to the copied Expo project before she can reuse its cr
 | Production bundle ID    | `com.maevemealplanner.app`                   | Verified in EAS with active App Store provisioning on team `QKQ2WNHKWS`                                                  |
 | Store build credentials | Copied Expo project, managed by EAS          | Verified November 17, 2026: certificate and active App Store profile expire November 17, 2027                            |
 | Submission credentials  | App Store Connect API key assigned in EAS    | App Manager key setup attempted November 17, 2026; Apple returned an internal server error; EAS assignment not confirmed |
-| App Store Connect app   | App record on Brandon's Apple team           | Apple ID (`ascAppId`) not yet recorded                                                                                   |
+| App Store Connect app   | App record on Brandon's Apple team           | Creation approved; Apple server/browser errors blocked creation; no `ascAppId` issued                                    |
 
 Brandon authorized using the EAS copy under `donarduous-1` because his account cannot
 access Maeve's original project (`ab8bd930-7448-49b7-b350-fcc3032aafe0`). The original
@@ -73,6 +73,19 @@ Integrations > App Store Connect API**. If **Request Access** appears, Brandon m
 review and submit that request himself, including any Apple terms. If API access
 is already active, verify whether the failed attempt created a key before
 retrying. See [Apple's API access instructions](https://developer.apple.com/help/app-store-connect/get-started/app-store-connect-api/).
+
+### App-record creation blocker
+
+Brandon explicitly approved creating **Table for One** on team `QKQ2WNHKWS`,
+with iOS, primary language English (US), bundle ID and SKU
+`com.maevemealplanner.app`. On November 17, 2026, the command-line creation
+attempt returned an Apple internal server error. The App Store Connect website
+also displayed an error; its New App form remained stuck loading bundle IDs and
+the Create button stayed disabled after the other approved fields were entered.
+No app record or numeric Apple ID was confirmed. The browser form was left
+prepared for a later retry. Do not populate `ascAppId` with a placeholder. Once
+Apple recovers, create/verify the record and record the real numeric ID in the
+submission profile. Existing signing credentials remain verified.
 
 ## Maeve's normal workflow
 
