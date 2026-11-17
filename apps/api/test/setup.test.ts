@@ -2,6 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { Writable } from 'node:stream';
 import { createRequire } from 'node:module';
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { buildApp } from '../src/app.js';
 import { loadConfig } from '../src/config.js';
 
@@ -175,6 +178,50 @@ test('mobile build environments have distinct identities and require hosted conf
     process.env.APP_ENV = 'production';
     process.env.EXPO_PUBLIC_API_URL = 'http://localhost:3000';
     assert.throws(() => configure({ config: {} }));
+  } finally {
+    process.env = original;
+  }
+});
+
+test('signing workspace uses the real production identity without requiring backend settings', () => {
+  const original = { ...process.env };
+  const root = new URL('../../../', import.meta.url);
+  try {
+    delete process.env.EXPO_PUBLIC_API_URL;
+    delete process.env.EXPO_PUBLIC_SUPABASE_URL;
+    delete process.env.EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+    execFileSync(
+      process.execPath,
+      [
+        fileURLToPath(new URL('scripts/ios-credentials.mjs', root)),
+        '--prepare-only',
+      ],
+      { cwd: fileURLToPath(root), env: process.env },
+    );
+    const signing = JSON.parse(
+      readFileSync(new URL('tmp/ios-signing/app.json', root), 'utf8'),
+    );
+    const require = createRequire(import.meta.url);
+    const configure = require('../../mobile/app.config.js');
+    const config = require('../../mobile/app.json').expo;
+    Object.assign(process.env, {
+      APP_ENV: 'production',
+      EXPO_PUBLIC_RELEASE_SCOPE: 'core',
+    });
+    assert.throws(() => configure({ config }), /must use HTTPS/);
+    Object.assign(process.env, {
+      EXPO_PUBLIC_API_URL: 'https://api.example.com',
+      EXPO_PUBLIC_SUPABASE_URL: base.SUPABASE_URL,
+      EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY: base.SUPABASE_PUBLISHABLE_KEY,
+    });
+    assert.deepEqual(signing.expo, configure({ config }));
+    assert.equal(signing.expo.ios.bundleIdentifier, 'com.mealplanner.app');
+    const eas = JSON.parse(
+      readFileSync(new URL('tmp/ios-signing/eas.json', root), 'utf8'),
+    );
+    assert.deepEqual(Object.keys(eas.build), ['production']);
+    assert.equal(eas.build.production.distribution, 'store');
+    assert.equal(eas.build.production.credentialsSource, 'remote');
   } finally {
     process.env = original;
   }

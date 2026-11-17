@@ -67,7 +67,7 @@ Install dependencies with `npm ci` from the repository root. Run EAS commands fr
 Keep `app.json` and `eas.json` in `apps/mobile`; the repository root is not an
 Expo app.
 
-The mobile app is linked to `@maeveotoole/meal-planner`. See the
+The mobile app is linked to the authorized copy `@donarduous-1/meal-planner`. See the
 [Apple signing handoff](docs/apple-signing-handoff.md) for the signing and
 submission setup shared with Brandon's Apple membership. Configure
 `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_SUPABASE_URL` and
