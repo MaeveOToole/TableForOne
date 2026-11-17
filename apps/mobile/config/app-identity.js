@@ -10,7 +10,10 @@ module.exports = ({ config, environment, releaseScope }) => {
       environment === 'production'
         ? 'mealplanner'
         : `mealplanner-${environment}`,
-    ios: { ...config.ios, bundleIdentifier: `com.mealplanner.app${suffix}` },
+    ios: {
+      ...config.ios,
+      bundleIdentifier: `com.maevemealplanner.app${suffix}`,
+    },
     extra: { ...config.extra, environment, releaseScope },
   };
 };

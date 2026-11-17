@@ -11,15 +11,15 @@ Maeve must receive access to the copied Expo project before she can reuse its cr
 | Source                  | `https://github.com/MaeveOToole/TableForOne` | Read-only upstream; handoff will be submitted through `brarduous/TableForOne`            |
 | Expo project            | `@donarduous-1/meal-planner`                 | Project ID `137583ff-377c-4c8a-8094-457257421a38`; accessible copy authorized by Brandon |
 | Apple team              | Brandon's paid membership                    | Team ID and membership type not verified                                                 |
-| Production bundle ID    | `com.mealplanner.app`                        | Configured in source; registration on the chosen Apple team not verified                 |
+| Production bundle ID    | `com.maevemealplanner.app`                   | Configured in source; registration on the chosen Apple team not verified                 |
 | Store build credentials | Copied Expo project, managed by EAS          | Not verified or created during this handoff                                              |
 | Submission credentials  | App Store Connect API key assigned in EAS    | Not configured during this handoff                                                       |
 | App Store Connect app   | App record on Brandon's Apple team           | Apple ID (`ascAppId`) not yet recorded                                                   |
 
 Brandon authorized using the EAS copy under `donarduous-1` because his account cannot
 access Maeve's original project (`ab8bd930-7448-49b7-b350-fcc3032aafe0`). The original
-project has not been modified. The copy shares the production bundle ID; it is not
-a second App Store app. Maeve will need access to the copy through an Expo
+project has not been modified. The copy now uses the requested production bundle
+ID `com.maevemealplanner.app`. Registration on Apple remains to be completed. Maeve will need access to the copy through an Expo
 organization, or a verified project transfer, before she can build independently.
 
 ## Complete the signing setup
@@ -29,7 +29,7 @@ organization, or a verified project transfer, before she can build independently
    the project to Maeve and verify credential access afterward. A personal Expo
    account does not provide organization-style member access. Do not share passwords.
 2. Confirm Brandon's paid Apple membership, team ID, membership type and that
-   `com.mealplanner.app` is available on that team. An Individual membership's
+   `com.maevemealplanner.app` is available on that team. An Individual membership's
    Account Holder must create and renew signing credentials. An Organization
    membership supports additional roles with signing access.
 3. From the repository root, run `npm run credentials:ios`. This generates an
@@ -41,7 +41,7 @@ organization, or a verified project transfer, before she can build independently
    confirmed Apple team. Select **Build Credentials**, then **All: Set up all the
    required credentials to build your project**. Reuse a suitable existing
    distribution certificate when offered; do not revoke other apps' certificates.
-   Create the App Store distribution provisioning profile for `com.mealplanner.app`.
+   Create the App Store distribution provisioning profile for `com.maevemealplanner.app`.
    Keep these credentials on EAS; production explicitly uses remote credentials.
 4. Create or confirm the App Store Connect app record on the same Apple team.
    Record its numeric Apple ID under `submit.production.ios.ascAppId` in

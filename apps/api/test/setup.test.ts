@@ -215,7 +215,7 @@ test('signing workspace uses the real production identity without requiring back
       EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY: base.SUPABASE_PUBLISHABLE_KEY,
     });
     assert.deepEqual(signing.expo, configure({ config }));
-    assert.equal(signing.expo.ios.bundleIdentifier, 'com.mealplanner.app');
+    assert.equal(signing.expo.ios.bundleIdentifier, 'com.maevemealplanner.app');
     const eas = JSON.parse(
       readFileSync(new URL('tmp/ios-signing/eas.json', root), 'utf8'),
     );
