@@ -20,15 +20,15 @@ With the API running, `npm run check:connection -w @meal/api` verifies health, r
 
 ## Development, staging and production
 
-| Configuration            | Development                       | Staging                                          | Production                                          |
-| ------------------------ | --------------------------------- | ------------------------------------------------ | --------------------------------------------------- |
-| API template             | `apps/api/.env.example`           | `config/environments/staging/api.env.example`    | `config/environments/production/api.env.example`    |
-| Mobile template          | `apps/mobile/.env.example`        | `config/environments/staging/mobile.env.example` | `config/environments/production/mobile.env.example` |
-| API/mobile `APP_ENV`     | `development`                     | `staging`                                        | `production`                                        |
-| EAS profile              | `development`                     | `staging` (`preview` alias)                      | `production`                                        |
-| EAS variable environment | `development`                     | `preview`                                        | `production`                                        |
-| iOS bundle ID            | `com.mealplanner.app.development` | `com.mealplanner.app.staging`                    | `com.mealplanner.app`                               |
-| URL scheme               | `mealplanner-development`         | `mealplanner-staging`                            | `mealplanner`                                       |
+| Configuration            | Development                            | Staging                                          | Production                                          |
+| ------------------------ | -------------------------------------- | ------------------------------------------------ | --------------------------------------------------- |
+| API template             | `apps/api/.env.example`                | `config/environments/staging/api.env.example`    | `config/environments/production/api.env.example`    |
+| Mobile template          | `apps/mobile/.env.example`             | `config/environments/staging/mobile.env.example` | `config/environments/production/mobile.env.example` |
+| API/mobile `APP_ENV`     | `development`                          | `staging`                                        | `production`                                        |
+| EAS profile              | `development`                          | `staging` (`preview` alias)                      | `production`                                        |
+| EAS variable environment | `development`                          | `preview`                                        | `production`                                        |
+| iOS bundle ID            | `com.maevemealplanner.app.development` | `com.maevemealplanner.app.staging`               | `com.maevemealplanner.app`                          |
+| URL scheme               | `mealplanner-development`              | `mealplanner-staging`                            | `mealplanner`                                       |
 
 Use different Supabase projects, API services, and variable sets for staging and production. Replace endpoints and publishable keys in each hosting/EAS environment; do not reuse development credentials. Actual values belong in hosting/EAS configuration or ignored `.env` files. For local rehearsal, copy the chosen templates into the corresponding app `.env`, fill them in, and run `npm run start -w @meal/api`. The mobile `APP_ENV` selects build identity; the API's `APP_ENV` selects server configuration. Both must match the intended environment.
 

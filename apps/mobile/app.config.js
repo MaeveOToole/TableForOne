@@ -1,3 +1,5 @@
+const appIdentity = require('./config/app-identity');
+
 module.exports = ({ config }) => {
   const environment = process.env.APP_ENV || 'development';
   if (!['development', 'staging', 'production'].includes(environment)) {
@@ -21,18 +23,5 @@ module.exports = ({ config }) => {
     if (!key || key.includes('replace-with-'))
       throw new Error('Set the environment publishable key.');
   }
-  const suffix = environment === 'production' ? '' : `.${environment}`;
-  return {
-    ...config,
-    name:
-      environment === 'production'
-        ? config.name
-        : `${config.name} (${environment})`,
-    scheme:
-      environment === 'production'
-        ? 'mealplanner'
-        : `mealplanner-${environment}`,
-    ios: { ...config.ios, bundleIdentifier: `com.mealplanner.app${suffix}` },
-    extra: { ...config.extra, environment, releaseScope },
-  };
+  return appIdentity({ config, environment, releaseScope });
 };

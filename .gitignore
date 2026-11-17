@@ -10,3 +10,8 @@ supabase/.temp/
 supabase/.branches/
 tmp/
 output/
+credentials.json
+*.p12
+*.p8
+*.mobileprovision
+*.certSigningRequest

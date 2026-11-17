@@ -60,6 +60,27 @@ On a physical iPhone, use your computer's LAN IP for EXPO_PUBLIC_API_URL and the
 
 The mobile app uses native SecureStore and needs an iOS development build. On a Mac with Xcode, run `npm run ios -w @meal/mobile`. On Windows, use EAS Build with an Expo account, Apple signing credentials, a unique bundle identifier in app.json, and a registered device: `npx eas-cli build --platform ios --profile development` from apps/mobile. Install that build and connect it to the Metro server. No Apple credentials or hosted project is configured by this repository.
 
+## iOS build and App Store Connect
+
+Install dependencies with `npm ci` from the repository root. Run EAS commands from
+`apps/mobile`, where the Expo app and its environment-aware build profiles live.
+Keep `app.json` and `eas.json` in `apps/mobile`; the repository root is not an
+Expo app.
+
+The mobile app is linked to the authorized copy `@donarduous-1/meal-planner`. See the
+[Apple signing handoff](docs/apple-signing-handoff.md) for the signing and
+submission setup shared with Brandon's Apple membership. Configure
+`EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_SUPABASE_URL` and
+`EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` in that project's EAS `production`
+environment before building. The URLs must use HTTPS; use only the publishable
+key in the app. See `config/environments/production/mobile.env.example`.
+
+From the repository root, run `npm run build:ios` to create the signed store build,
+then `npm run submit:ios` to upload it to App Store Connect/TestFlight. EAS prompts
+for Apple signing/submission access when needed. This upload does not submit the
+app for public App Review. Complete the [release checklist](docs/first-release.md)
+before requesting public release.
+
 ## Checks
 
 Run `npm run test:web:core` for the core-release browser flows, or `npm run test:web` for the development extended-scope regression suite. Both use isolated API/session fixtures rather than real account writes; see [browser regression checks](docs/browser-regression-checks.md). Windows uses installed Chrome; CI installs Playwright Chromium and runs both modes.

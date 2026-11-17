@@ -8,10 +8,13 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mealplanner.app",
-      "deploymentTarget": "16.4"
+      "bundleIdentifier": "com.maevemealplanner.app",
+      "deploymentTarget": "16.4",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
-    "plugins": ["expo-secure-store", "expo-status-bar"],
+    "plugins": ["expo-secure-store", "expo-status-bar", "expo-sqlite"],
     "platforms": ["ios", "web"],
     "web": {
       "bundler": "metro"
@@ -20,9 +23,9 @@
       "environment": "development",
       "releaseScope": "core",
       "eas": {
-        "projectId": "ab8bd930-7448-49b7-b350-fcc3032aafe0"
+        "projectId": "137583ff-377c-4c8a-8094-457257421a38"
       }
     },
-    "owner": "maeveotoole"
+    "owner": "donarduous-1"
   }
 }
